@@ -3,7 +3,7 @@
 class Car {
   constructor({ maxSpeed, price, speed = 0, isOn = false, distance = 0 }) {
     this.maxSpeed = maxSpeed;
-    this._price = price;
+    this.price = price;
     this.speed = speed;
     this.isOn = isOn;
     this.distance = distance;
@@ -13,12 +13,16 @@ class Car {
       `maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}`,
     );
   }
-  get price() {
-    return this._price;
+  get carPrice() {
+    return this.price;
   }
-  set price(newPrice) {
-    this._price = newPrice;
+  set carPrice(newPrice) {
+    this.price = newPrice;
   }
+  /*
+   * Додай геттер і сеттер для властивості price,
+   * який буде працювати з властивістю ціни автомобіля.
+   */
   turnOn() {
     this.isOn = true;
   }

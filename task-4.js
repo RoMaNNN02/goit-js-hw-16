@@ -20,7 +20,7 @@ class StringBuilder {
   }
   pad(str) {
     this._value = this._value += str;
-    this._value = str += this._value;
+    this._value = str + this._value;
   }
 }
 const builder = new StringBuilder(".");
